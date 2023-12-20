@@ -12,8 +12,8 @@ public class App implements ActionListener
     JTextField textField;
     //Calculator calculator = new Calculator();
     JButton[] numButtons = new JButton[10];
-    JButton[] functionButtons = new JButton[8];
-    JButton additionButton, subtractionButton, multiplicationButton, divisionButton;
+    JButton[] functionButtons = new JButton[7];
+    JButton additionButton, subtractionButton,  divisionButton; //multiplicationButton,
     JButton equalityButton, decimalPointButton, clrButton, delButton;
     JPanel mainPanel, textFieldPanel, buttonPanel;
     boolean operationCompleted = false;
@@ -62,7 +62,7 @@ public class App implements ActionListener
 
         additionButton = new JButton("+");
         subtractionButton = new JButton("-");
-        multiplicationButton = new JButton("*");
+        //multiplicationButton = new JButton("*");
         divisionButton = new JButton("/");
         equalityButton = new JButton("=");
         decimalPointButton = new JButton(".");
@@ -71,12 +71,12 @@ public class App implements ActionListener
 
         functionButtons[0] = additionButton;
         functionButtons[1] = subtractionButton;
-        functionButtons[2] = multiplicationButton;
-        functionButtons[3] = divisionButton;
-        functionButtons[4] = equalityButton;
-        functionButtons[5] = decimalPointButton;
-        functionButtons[6] = clrButton;
-        functionButtons[7] = delButton;
+        //functionButtons[2] = multiplicationButton;
+        functionButtons[2] = divisionButton;
+        functionButtons[3] = equalityButton;
+        functionButtons[4] = decimalPointButton;
+        functionButtons[5] = clrButton;
+        functionButtons[6] = delButton;
 
         for (JButton numButton : numButtons) {
             numButton.addActionListener(this);
@@ -223,10 +223,10 @@ public class App implements ActionListener
             operand1 = Double.parseDouble(textField.getText());
             textField.setText("");
             operator = '-';
-        } else if (source == multiplicationButton) {
-            operand1 = Double.parseDouble(textField.getText());
-            textField.setText("");
-            operator = '*';
+//        } else if (source == multiplicationButton) {
+//            operand1 = Double.parseDouble(textField.getText());
+//            textField.setText("");
+//            operator = '*';
         } else if (source == divisionButton) {
             operand1 = Double.parseDouble(textField.getText());
             textField.setText("");
@@ -248,11 +248,11 @@ public class App implements ActionListener
                     result = subtraction.perform();
                     resultString = subtraction.simplifyNumber(result);
                     break;
-                case '*':
-                    Multiplication multiplication = new Multiplication(operand1, operand2);
-                    result = multiplication.perform();
-                    resultString = multiplication.simplifyNumber(result);
-                    break;
+//                case '*':
+//                    Multiplication multiplication = new Multiplication(operand1, operand2);
+//                    result = multiplication.perform();
+//                    resultString = multiplication.simplifyNumber(result);
+//                    break;
                 case '/':
                     Division division = new Division(operand1, operand2);
                     result = division.perform();
