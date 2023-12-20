@@ -28,7 +28,7 @@ jobs:
       - run:
           name: Install Maven
           command: |
-            MAVEN_VERSION=3.8.4
+            MAVEN_VERSION=3.9.6
             MAVEN_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz
             curl -fsSL ${MAVEN_URL} | tar xz -C /opt
             export PATH="/opt/apache-maven-${MAVEN_VERSION}/bin:$PATH"
