@@ -15,11 +15,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Project check"
-          command: "echo Checking project"
-          
-      # Build and test
-      - run: mvn clean install
+          name: "Build and test"
+          command: "echo Checking project" | mvn clean install
 
 
 # Orchestrate jobs using workflows
