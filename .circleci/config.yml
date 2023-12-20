@@ -15,12 +15,20 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Project check"
-          command: "echo Checking project"
+          name: "Project checkout"
+          command: "echo Checking out project"
+
+  build-project:
+    docker:
+      - image: cimg/base:stable
+
+    steps:
+      - run: mvn clean install
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  say-hello-workflow:
+  project-build-workflow:
     jobs:
       - check-project
+      - build-project
