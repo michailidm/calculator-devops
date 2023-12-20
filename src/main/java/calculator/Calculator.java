@@ -33,7 +33,6 @@ public class Calculator {
      * <ul>
      *     <li>Addition</li>
      *     <li>Subtraction</li>
-     *     <li>Multiplication</li>
      *     <li>Division</li>
      *     <li>Sine</li>
      *     <li>Cosine</li>
@@ -48,9 +47,6 @@ public class Calculator {
 
         Subtraction subtraction = new Subtraction();
         this.addOperation(subtraction);
-
-        Multiplication multiplication = new Multiplication();
-        this.addOperation(multiplication);
 
         Division division = new Division();
         this.addOperation(division);
