@@ -8,7 +8,7 @@ import java.util.Scanner;
  * The <code>Calculator</code> class represents a calculator.
  */
 public class Calculator {
-    private ArrayList<Operation> operations;
+    private final ArrayList<Operation> operations;
 
     public Calculator() {
         this.operations = new ArrayList<>();
@@ -104,9 +104,7 @@ public class Calculator {
                 continue;
             }
 
-            Calculator calculator = new Calculator();
-
-            if (choice > calculator.getOperations().size() || choice < 0) {
+            if (choice > this.getOperations().size() || choice < 0) {
                 System.out.println("Invalid choice, please try again.");
                 scan.nextLine();
                 continue;
