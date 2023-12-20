@@ -1,2 +1,11 @@
-calculator/AppTest.class
-calculator/CalculatorTest.class
+calculator\ExponentialTest.class
+calculator\AdditionTest.class
+calculator\SquareRootTest.class
+calculator\TangentTest.class
+calculator\SineTest.class
+calculator\CalculatorTest.class
+calculator\AppTest.class
+calculator\MultiplicationTest.class
+calculator\CosineTest.class
+calculator\DivisionTest.class
+calculator\SubtractionTest.class

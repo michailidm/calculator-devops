@@ -1,1 +1,14 @@
-calculator/App.class
+calculator\Division.class
+calculator\Subtraction.class
+calculator\UnaryOperation.class
+calculator\Calculator.class
+calculator\BinaryOperation.class
+calculator\Addition.class
+calculator\Operation.class
+calculator\Sine.class
+calculator\SquareRoot.class
+calculator\Tangent.class
+calculator\App.class
+calculator\Cosine.class
+calculator\TrigonometricOperation.class
+calculator\Exponential.class
