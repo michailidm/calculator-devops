@@ -9,7 +9,7 @@ jobs:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/configuration-reference/#executor-job
     docker:
-      - image: cimg/base:stable
+      - image: cimg/openjdk:21.0.0
     # Add steps to the job
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
@@ -20,7 +20,7 @@ jobs:
 
   build-project:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/openjdk:21.0.0
     steps:
       - checkout
 
@@ -30,8 +30,6 @@ jobs:
           command: |
             MAVEN_VERSION=3.9.6
             MAVEN_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz
-            sudo chmod 755 /opt
-            chmod -R u+rwx /opt
             curl -fsSL ${MAVEN_URL} | tar -xf apache-maven-3.9.6.tar.gz -C /opt
             export PATH="/opt/apache-maven-${MAVEN_VERSION}/bin:$PATH"
 

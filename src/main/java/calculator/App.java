@@ -6,6 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.*;
 
+/**
+ * Represents the calculator application and sets its UI.
+ */
 public class App implements ActionListener
 {
     JFrame frame;
