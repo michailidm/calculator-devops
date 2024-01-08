@@ -20,18 +20,9 @@ jobs:
 
   build-project:
     docker:
-      - image: cimg/openjdk:21.0.0
+      - image: maven:3.8.4-jdk-11
     steps:
       - checkout
-
-      # Install Maven
-      - run:
-          name: Install Maven
-          command: |
-            MAVEN_VERSION=3.9.6
-            MAVEN_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz
-            curl -fsSL ${MAVEN_URL} | tar -xf apache-maven-${MAVEN_VERSION}-bin.tar.gz -C C:\opt
-            export PATH="/opt/apache-maven-${MAVEN_VERSION}/bin:$PATH"
 
       # Your build commands using Maven
       - run:
